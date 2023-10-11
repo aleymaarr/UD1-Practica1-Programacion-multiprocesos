@@ -50,13 +50,4 @@ El proyecto tiene como objetivo contar el número de vocales en un texto que se 
 4. **Presentar Resultados**: `Main` muestra el recuento de cada vocal y el total de vocales.
 
 
-### Flujo de Ejecución
-
-1. **Leer el Texto**: `Main` utiliza `Utils.getAllLines` para leer todas las líneas del archivo de texto.
-
-2. **Inicializar Subprocesos**: Para cada vocal y cada línea del texto, `Main` utiliza `ProcessLauncher.initContadorVocalProcess` para crear un subproceso que cuenta la cantidad de la vocal en la línea utilizando `VocalCounter`.
-
-3. **Esperar y Recopilar Resultados**: `Main` espera a que todos los subprocesos terminen y recopila sus resultados.
-
-4. **Presentar Resultados**: `Main` muestra el recuento de cada vocal y el total de vocales.
 
