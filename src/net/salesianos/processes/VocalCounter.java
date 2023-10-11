@@ -11,16 +11,6 @@ public class VocalCounter {
             }
         }
         System.out.println(vocal + "," + count);
-
-        for(int i = 0; i < line.length(); i++) {
-            if(line.charAt(i) == vocal.charAt(0)) {
-                count++;
-            }
-        }
-        System.out.println(vocal + "," + count);
     }
-
-    }
-
 }
 
