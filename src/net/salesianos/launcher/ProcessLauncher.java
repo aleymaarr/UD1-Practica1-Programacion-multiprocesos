@@ -9,6 +9,10 @@ public class ProcessLauncher {
                 "java", "/Users/alejandro/IdeaProjects/UD1-Practica1-Programacion-multiproceso/src/net/salesianos/processes/VocalCounter.java", vocal, line
         );
 
+        ProcessBuilder processBuilder = new ProcessBuilder(
+                "java", "/Users/alejandro/IdeaProjects/UD1-Practica1-Programacion-multiproceso/src/net/salesianos/processes/VocalCounter.java", vocal, line
+        );
+
         Process javaProcess = null;
 
         try {
