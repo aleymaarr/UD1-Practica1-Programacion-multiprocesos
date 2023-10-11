@@ -5,6 +5,5 @@ public class WordCounter {
         String line = args[0];
         String[] words = line.split(" ");
         System.out.println(words.length);
-
     }
 }
