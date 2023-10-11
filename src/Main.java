@@ -14,10 +14,6 @@ public class Main {
         String[] vocales = new String[] { "a", "e", "i", "o", "u" };
         HashMap<String, Integer> vocalCounts = new HashMap<>();
 
-        ArrayList<String> lines = Utils.getAllLines("/Users/alejandro/IdeaProjects/UD1-Practica1-Programacion-multiproceso/src/loremipsum.txt");
-        ArrayList<Process> allProcesses = new ArrayList<>();
-        String[] vocales = new String[] { "a", "e", "i", "o", "u" };
-        HashMap<String, Integer> vocalCounts = new HashMap<>();
 
         for (String vocal : vocales) {
             vocalCounts.put(vocal, 0);
@@ -30,16 +26,6 @@ public class Main {
             }
         }
 
-        for (String vocal : vocales) {
-            vocalCounts.put(vocal, 0);
-        }
-
-        for (String line : lines) {
-            for (String vocal : vocales) {
-                Process javaProcess = ProcessLauncher.initContadorVocalProcess(vocal, line);
-                allProcesses.add(javaProcess);
-            }
-        }
 
 
         for (Process process : allProcesses) {
@@ -62,14 +48,6 @@ public class Main {
                 e.printStackTrace();
             }
         }
-
-        int totalCount = 0;
-        for (String vocal : vocales) {
-            int count = vocalCounts.get(vocal);
-            System.out.println("Total de " + vocal + ": " + count);
-            totalCount += count;
-        }
-        System.out.println("Total de vocales: " + totalCount);
 
         int totalCount = 0;
         for (String vocal : vocales) {
