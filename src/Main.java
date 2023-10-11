@@ -25,33 +25,6 @@ public class Main {
             }
         }
 
-        for (String line : lines) {
-            for (String vocal : vocales) {
-                Process javaProcess = ProcessLauncher.initContadorVocalProcess(vocal, line);
-                allProcesses.add(javaProcess);
-            }
-        }
-
-        for (Process process : allProcesses) {
-            try {
-                process.waitFor();
-                BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
-                String output = reader.readLine();
-
-                if (output != null) {
-                    String[] parts = output.split(",");
-                    if (parts.length >= 2) {
-                        String vocal = parts[0];
-                        int count = Integer.parseInt(parts[1]);
-                        vocalCounts.put(vocal, vocalCounts.get(vocal) + count);
-                    } else {
-                        System.out.println("Formato de salida inesperado: " + output);
-                    }
-                }
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        }
 
         for (Process process : allProcesses) {
             try {
